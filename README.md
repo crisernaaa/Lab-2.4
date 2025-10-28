@@ -1,6 +1,6 @@
 # 🧠 CPU Scheduler Simulator (Homework 3)
 
-**Author:** *[Your Name]*  
+**Author:** *Cristóbal Serna*  
 **Course:** Operating Systems  
 **Platform:** Ubuntu 22.04 LTS  
 **Language:** C (GCC 11+)  
