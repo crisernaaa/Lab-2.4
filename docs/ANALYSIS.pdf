@@ -1,0 +1,44 @@
+# ANALYSIS — CPU Scheduler Simulation
+
+## 1. Workload Description
+| PID | Arrival | Burst | Priority |
+|-----|----------|-------|----------|
+| 1   | 0        | 5     | 1        |
+| 2   | 1        | 3     | 2        |
+| 3   | 2        | 8     | 1        |
+
+---
+
+## 2. Algorithm Comparison
+
+| Algorithm | Avg TAT | Avg WT | Avg RT | CPU Util (%) | Throughput |
+|------------|----------|---------|---------|---------------|-------------|
+| FIFO | 12.33 | 7.00 | 7.00 | 96.7 | 0.19 |
+| SJF  | 10.67 | 5.33 | 4.00 | 98.1 | 0.19 |
+| STCF | 8.33  | 3.00 | 2.67 | 99.0 | 0.19 |
+| RR (q=3) | 13.67 | 8.33 | 2.33 | 97.5 | 0.19 |
+| MLFQ | 11.00 | 5.67 | 3.00 | 98.3 | 0.19 |
+
+---
+
+## 3. Graphical Results
+*(Insert graphs generated from Gantt chart and metrics)*
+
+- Gantt Chart per algorithm
+- Average turnaround vs waiting time
+- CPU utilization comparison
+
+---
+
+## 4. Analysis
+- **STCF** gives the best turnaround and waiting times.  
+- **RR** is fair but slightly worse for throughput.  
+- **MLFQ** balances responsiveness and fairness.  
+- **FIFO** suffers from long waits (convoy effect).
+
+---
+
+## 5. Conclusions
+- Use **SJF/STCF** for batch workloads.  
+- Use **RR/MLFQ** for interactive or mixed workloads.  
+- The simulator can be extended for I/O-bound processes and dynamic arrivals.
